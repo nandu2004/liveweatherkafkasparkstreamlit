@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# Spark / Hadoop
+spark-warehouse/
+metastore_db/
+derby.log
+checkpoint/
+*.log
+
+# Database
+*.sqlite
+*.db
+*.db-journal
+
+# IDEs & System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+# If you map Kafka/Zookeeper data to local folders:
+data/
