@@ -288,9 +288,9 @@ def main():
         .config("spark.sql.streaming.forceDeleteTempCheckpointLocation", "true")
         .config("spark.hadoop.io.native.lib.available", "false")
         .config("spark.hadoop.fs.file.impl", "org.apache.hadoop.fs.RawLocalFileSystem")
+        .config("spark.hadoop.fs.file.impl.disable.cache", "true")
         .getOrCreate()
     )
-
     spark.sparkContext.setLogLevel("WARN")
 
     logger.info("Reading from Kafka topic 'raw-weather'...")
